@@ -1,0 +1,30 @@
+{
+  "name": "healthtech",
+  "version": "1.0.0",
+  "description": "Sistema de Gestão de Rotinas para Cuidadores Autônomos\r O Health Tech é desenvolvida para facilitar o dia a dia de cuidadores de idosos que gerenciam múltiplos pacientes simultaneamente. A aplicação centraliza informações vitais, garantindo que cada idoso receba o atendimento personalizado que sua condição exige, eliminando falhas de comunicação e esquecimentos de protocolos médicos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stumpf-alexandre/healthTech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stumpf-alexandre/healthTech/issues"
+  },
+  "homepage": "https://github.com/stumpf-alexandre/healthTech#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
