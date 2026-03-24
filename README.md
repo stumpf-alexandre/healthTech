@@ -1,22 +1,15 @@
-# 🩺 Health Tech (Cuidadores de Idosos) M1/N1 – Módulo Backend
-
-Sistema de Gestão de Rotinas para Cuidadores Autônomos
+# 🩺 Health Tech (Sistema de Gestão de Rotinas para Cuidadores Autônomos)
 O Health Tech é desenvolvida para facilitar o dia a dia de cuidadores de idosos que gerenciam múltiplos pacientes simultaneamente. A aplicação centraliza informações vitais, garantindo que cada idoso receba o atendimento personalizado que sua condição exige, eliminando falhas de comunicação e esquecimentos de protocolos médicos.
 
 ## Diferencial
 Diferente de agendas comuns, esta aplicação é desenhada sob a ótica da atenção humanizada, permitindo que a cuidadora transite entre diferentes contextos domiciliares com todo o histórico clínico e comportamental do paciente na palma da mão.
 
-## Informações Gerais
+## 🚨 Informações Gerais  🚨
 O desafio foi estruturado para simular uma situação próxima da realidade profissional, em
 que não existe um problema totalmente definido nem uma solução pronta.
 Ao longo do desafio, você deverá interpretar um contexto, tomar decisões e propor uma
 solução coerente com o cenário analisado.
 Todo o documento deve ser lido com atenção antes da escolha de qualquer caso.
-
-## Cronograma do Desafio Final
-Início do desafio: 23/03
-Data em que o desafio será apresentado, explicado e liberado para início.
-Entrega final: 08/04, até às 23:59h
 
 ## Objetivo do Desafio
 O desafio tem como objetivo colocar em prática os conhecimentos trabalhados ao longo das
@@ -31,13 +24,12 @@ Não existe uma única forma correta de resolver o desafio. O que se espera é u
 coerente, bem fundamentada e alinhada ao problema identificado por você.
 
 ## Estrutura do Desafio
-Solução técnica (Backend) (Obrigatória)
+1. Solução técnica (Backend) (Obrigatória)
 Nesta etapa, você deverá desenvolver uma solução técnica utilizando as linguagens,
 frameworks/bibliotecas e ferramentas apresentadas em aula.
 💡 Não é necessário frontend. Caso exista, deve ser complementar.
 
-📖 Caso de Análise — Rotina Fragmentada de
-Atendimento Individual
+2. 📖 Caso de Análise — Rotina Fragmentada de Atendimento Individual
 Uma cuidadora de idosos atua de forma autônoma, atendendo diferentes pacientes ao
 longo da semana em suas próprias residências. Cada pessoa possui uma rotina específica,
 com necessidades que variam conforme seu estado de saúde, nível de autonomia e
@@ -74,6 +66,7 @@ O material deve permitir que outra pessoa:
  * Execute a aplicação
  * Entenda como as informações estão organizadas
  * E visualize como a solução responde ao problema identificado
+
 ## O que deve ser entregue
 Você deverá apresentar:
  * A aplicação backend desenvolvida
@@ -91,3 +84,8 @@ proposta.
 ## Entrega
 A entrega deverá ser realizada via Google Classroom, contendo os materiais necessários
 para compreensão e execução da solução
+
+## Cronograma do Desafio
+Início do desafio: 23/03
+Data em que o desafio será apresentado, explicado e liberado para início.
+Entrega final: 08/04, até às 23:59h
