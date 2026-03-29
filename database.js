@@ -7,7 +7,7 @@ const {open} = require('sqlite');
 //====================================================
 //Passo-2, criando função assincrona
 //====================================================
-const criarBanco = async() => {
+const createBank = async() => {
 
 //====================================================
 //Passo-3, cria o banco de dados
@@ -19,11 +19,8 @@ const criarBanco = async() => {
 
 //====================================================
 //Passo-4, criar tabela do BD
-//=========v==========================================
+//====================================================
 
-    await db.exec("PRAGMA foreign_keys = ON;");
-
-    //Tabela pai
     await db.exec(`
         CREATE TABLE IF NOT EXISTS pacientes(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -35,12 +32,13 @@ const criarBanco = async() => {
             hora_medicacao TEXT,
             exercicio_especifico TEXT,
             tipo_banho TEXT,
-            higiene_bucal BOOLEAN,
-            troca_fralda BOOLEAN,
+            higiene_bucal INTEGER,
+            troca_fralda INTEGER,
             hidratacao_pele TEXT,
             observacoes TEXT  DEFAULT 'Sem observações',
         )
     `);
 
     console.log('Banco de dados configurado!!!');
+
 };
