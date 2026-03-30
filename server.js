@@ -5,14 +5,14 @@ const express = require ('express');
 const createBanck = require('./database');
 
 //====================================================
-//Passo-6, inicializando servidor e configurando express
+//Passo-6, inicializando e configurando express
 //====================================================
 const app = express();
 app.use(express.json());
 const PORT = 3000;
 
 //====================================================
-//Passo-7, Criando rota principal
+//Passo-7, Rota principal
 //====================================================
 app.get('/', (req, res) => {
     res.send(`
@@ -25,3 +25,18 @@ app.get('/', (req, res) => {
         `);
 });
 
+//====================================================
+//Passo-8, Ligando servidor
+//====================================================
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
+
+//====================================================
+//Passo-9, Rota de listagem
+//====================================================
+app.get('/pacientes', async (req, res) => {
+    const db = await createBanck();
+    const listPatients = await db.all(`SELECT * FROM pacientes`);
+    res.json(listPatients);
+});
