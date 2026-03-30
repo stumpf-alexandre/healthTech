@@ -1,7 +1,7 @@
 //====================================================
 //Passo-1, importar sqlite(cerebro) e sqlite3(musculo)
 //====================================================
-const sqlite3 = require('aqlite3');
+const sqlite3 = require('sqlite3');
 const {open} = require('sqlite');
 
 //====================================================
