@@ -56,7 +56,7 @@ app.get('/pacientes/:id', async (req, res) => {
 //====================================================
 //Passo-15, Rota POST
 //====================================================
-app.post('pacientes', async (req, res) => {
+app.post('/pacientes', async (req, res) => {
     const {nome_paciente, endereco_paciente, nome_responsavel, telefone_responsavel, medicação_paciente, hora_medicacao, exercicio_especifico, tipo_banho, higiene_bucal, troca_fralda, hidratacao_pele} = req.body;
     const db = await criarBanco();
     await db.run(`
