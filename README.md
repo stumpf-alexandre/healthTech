@@ -93,9 +93,29 @@ Retorna todos os registros do banco de dados
 ```http
 GET /pacientes/:id
 ```
-Ex.: /pacientes/1
+Ex.: /pacientes/3
 
 Retorna os dados de um paciente especifico.
+
+#### - Body (JSON)
+
+```json
+{
+    "id": 3,
+    "nome_paciente": "Raul Assunção",
+    "endereco_paciente": "Rua Nova, 102, bairro: Praia Grande",
+    "nome_responsavel": "Rubia Assunção",
+    "telefone_responsavel": "(43)898922224",
+    "medicação_paciente": "Atenolol, 1 1/2 comprimido",
+    "hora_medicacao": "10:00",
+    "exercicio_especifico": "Exercicio Passivo Ativo",
+    "tipo_banho": "Banho de leito",
+    "higiene_bucal": 1,
+    "troca_fralda": 1,
+    "hidratacao_pele": "hidratação de membros posteriores e inferiores",
+    "observacoes": "Pressão arterial 21 por 11 batimentos 120"
+},
+```
 
 
 ### Rota para criar um novo paciente
@@ -107,20 +127,39 @@ POST /pacientes
 #### - Body (JSON)
 
 ```json
-{},
+{
+    "id": 5,
+    "nome_paciente": "Josué de Deus",
+    "endereco_paciente": "Rua Ilha norte, 32, bairro: Braço direito",
+    "nome_responsavel": "Maria João de Deus",
+    "telefone_responsavel": "(34) 984477789",
+    "medicação_paciente": "1 1/2 Treonato de Omega 3",
+    "hora_medicacao": "8:00 em 8:00",
+    "exercicio_especifico": "Fortalecimento cognitivo",
+    "tipo_banho": "Banho de chuveiro",
+    "higiene_bucal": 0,
+    "troca_fralda": 0,
+    "hidratacao_pele": "sem hidratação",
+    "observacoes": "Sem observações"
+},
 ```
 
 
 ### Rota para atualizar um paciente
 
-```json
+```http
 PUT /paciente/:id
 ```
 
 #### - Body (JSON)
 
 ```json
-{}
+{
+    "endereco_paciente": "Rua das Princesas, 442, bairro: Morro do careca",
+    "medicação_paciente": "Imunosupresores",
+    "hora_medicacao": "1 24:00",
+    "observacoes": "Sem rejeição de órgão"
+}
 ```
 
 ### Rota para deletar um paciente
@@ -155,3 +194,23 @@ Isso evita o SQL Injection
 Este projeto foi desenvolvido para fins de aprendizado em back-end com Node.js, por Alexandre
 
 ---
+
+## ⚙️ Demonstrando o funcionamento da solução
+
+* ### Função GET para listar API dos pacientes
+![Imagem da função GET](./img/get.jpg)
+
+---
+
+* ### Função POST para postar novo paciente na API
+![Imagem da função POST](./img/post.jpg)
+
+---
+
+* ### Função PUT para atualizar dados de um paciente
+![Imagem da função PUT](./img/put.jpg)
+
+---
+
+* ### Função DELETE para deletar um paciente da API
+* ![Imagem da função DELETE](./img/delete.jpg)
