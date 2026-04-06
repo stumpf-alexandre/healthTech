@@ -65,3 +65,30 @@ app.post('pacientes', async (req, res) => {
 
     res.send(`Paciente ${nome_paciente} com seu responsavel ${nome_responsavel}, cadastrado com sucesso`)
 });
+
+//====================================================
+//Passo-16, Rota PUT
+//====================================================
+app.put('/pacientes/:id', async (req, res) => {
+    const { id } = req.params;
+    const {endereco_paciente, medicação_paciente, hora_medicacao, observacoes} =req.body;
+    const db = await criarBanco();
+    await db.run(`
+        UPDATE pacientes
+        SET endereco_paciente = ?, medicação_paciente = ?, hora_medicacao = ?, observacoes = ?
+        WHERE id = ?
+    `, [endereco_paciente, medicação_paciente, hora_medicacao, observacoes, id]);
+    res.send(`Os dados do paciente de id ${id}, foram atualizados com sucesso`);
+});
+
+//====================================================
+//Passo-17, Rota DELETE
+//====================================================
+app.delete('/pacientes/:id', async (req, res) => {
+    const { id } = req.params;
+    const db = await criarBanco();
+    await db.run(`
+        DELETE FROM pacientes WHERE id = ?    
+    `, [id]);
+    res.send(`O paciente de id ${id}, foi removido com sucesso`);
+});
