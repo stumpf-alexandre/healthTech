@@ -20,7 +20,6 @@ const criarBanco = async () => {
 //====================================================
 //Passo-4, criar tabela do BD
 //====================================================
-
     await db.exec(`
         CREATE TABLE IF NOT EXISTS pacientes(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +43,6 @@ const criarBanco = async () => {
 //====================================================
 //Passo-10, Insert (C_rud 'CREATE')
 //====================================================
-
     const checagem = await db.get('SELECT COUNT(*) AS total FROM pacientes');
 
     if(checagem.total === 0) {
@@ -63,10 +61,27 @@ const criarBanco = async () => {
 //Passo-11, Select (c_R_ud 'READ')
 //====================================================
     const todosPacientes = await db.all(`
-            SELECT * FROM pacientes
-        `);
+        SELECT * FROM pacientes
+    `);
     console.table(todosPacientes);
 
+//====================================================
+//Passo-12, Update (cr_U_d 'UPDATE')
+//====================================================
+    await db.run(`
+        UPDATE pacientes 
+        SET observacoes = 'Pressão arterial 21 por 11 batimentos 120', 
+        telefone_responsavel = '(43)898922224' 
+        WHERE id = 3
+    `);
+    console.log(`Dados atualizados`);
+
+//====================================================
+//Passo-13, Delete (cru_D 'DELETE')
+//====================================================
+    await db.run(`
+        DELETE FROM pacientes WHERE id = 4    
+    `);
 
     return db;
 };

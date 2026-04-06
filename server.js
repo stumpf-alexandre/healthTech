@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
             <body>
                 <h1>Health Tech</h1>
                 <h2>Gestão de cuidados para idosos</h2>
-                <p>Endpoint que leva aos pacientes cadastrados: <a href="http://localhost:3000/pacientes">/pacientes</a></p>
-                <p>Endpoint que leva aos paciente cadastrados: <a href="http://localhost:3000/pacientes/4">/paciente especifico</a></p>
+                <p>Endpoint que leva aos pacientes cadastrados: <a href="http://localhost:${PORT}/pacientes">/pacientes</a></p>
+                <p>Endpoint que leva aos paciente cadastrados: <a href="http://localhost:${PORT}/pacientes/3">/paciente especifico</a></p>
             </body>
         `);
 });
